@@ -47,7 +47,7 @@ const walker = (p) => {
 const removeNodeModule = (path, spinner) => {
   try {
     spinner.start(`正在删除${path}`)
-    // rimraf.sync(path)
+    rimraf.sync(path)
     spinner.succeed(`删除${path} 成功！`)
   } catch (err) {
     spinner.fail(`删除${path} 失败`)
